@@ -25,13 +25,23 @@ var Feed = React.createClass({
             ]
         };
     },
+    deleteItem: function(itemScore){
+        var items = this.state.items;
+        items.forEach(function(item, index){
+            if(item.score === itemScore){
+                items.splice(index, 1);
+            }
+        });
+        this.setState({items: items});
+    },
     render: function() {
+        var self = this;
         return (
             <div>
                 <FeedForm></FeedForm>
                 {
                     this.state.items.map(function(item){
-                        return <FeedItem {...item} key={item.score}></FeedItem>;
+                        return <FeedItem {...item} deleteItem={self.deleteItem} key={item.score}></FeedItem>;
                     })
                 }
             </div>
