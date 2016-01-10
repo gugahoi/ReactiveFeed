@@ -7,7 +7,7 @@ var Welcome = React.createClass({
     render: function(){
         return (
             <div>
-                Welcome to Centricity
+                Welcome to ReactiveFeed
             </div>
         );
     }
