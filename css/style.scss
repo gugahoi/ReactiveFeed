@@ -1,0 +1,12 @@
+body {
+    margin: 0 auto;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.TopBar, .LeftBar, .Footer {
+    flex: 1 100%;
+}

@@ -1,0 +1,17 @@
+.TopBar {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: deepskyblue;
+
+    li {
+        padding: 10px;
+        list-style-type: none;
+
+        &.active {
+            background-color: darken(deepskyblue, 8);
+        }
+
+    }
+
+}
